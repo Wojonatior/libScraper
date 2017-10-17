@@ -13,16 +13,14 @@ rp(options)
   .then(($) => {
     const availiblity = $('.item-request').text();
     console.log(availiblity);
-    client.messages.create({ 
-        to: process.env.MY_PHONE_NUMBER, 
-        from: process.env.TWILIO_PHONE_NUMBER, 
-        body: availiblity, 
-    }, (err, message) => { 
-        console.log(message.sid); 
-    });
+
+    if(/\d/.test(availiblity)){
+      client.messages.create({ 
+          to: process.env.MY_PHONE_NUMBER, 
+          from: process.env.TWILIO_PHONE_NUMBER, 
+          body: `OP-1: ${availiblity}`, 
+      }, console.log);}
   })
-  .catch((err) => {
-    console.log(err);
-  });
+  .catch(console.log);
 
  
