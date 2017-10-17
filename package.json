@@ -1,0 +1,13 @@
+{
+  "name": "libScraper",
+  "version": "1.0.0",
+  "description": "Scrapes the AADL website for the checkout statuses of a specified item",
+  "main": "index.js",
+  "repository": "github.com/wojonatior/libscraper",
+  "author": "Jarek Wojciechowski",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request-promise": "^4.2.2"
+  }
+}
